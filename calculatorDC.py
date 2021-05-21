@@ -45,7 +45,7 @@ def performMath():
             # remove any symbols that aren't numbers or operators #
 
             else:
-                equation = re.sub('[a-zA-z,.:()" "]', '', equation)
+                equation = re.sub('[a-zA-z,:()" "]', '', equation)
 
             # do the math, accounting for previous results #
 
