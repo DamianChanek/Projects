@@ -58,6 +58,9 @@ def performMath():
         except SyntaxError:
             print('Invalid input. Please try again.')
             continue
+        except ZeroDivisionError:
+            print('Your highschool math teacher just felt a sharp pain in his heart...')
+            continue
 
         else:
             break
