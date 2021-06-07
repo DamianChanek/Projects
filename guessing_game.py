@@ -9,7 +9,7 @@ from termcolor import colored as color
 # welcome message #
 print(color("Welcome to my guessing game!"
       '\n\nThe goal is to guess a number between 0 and 100 in the least amount of tries possible.'
-      "\nAfter each guess you'll receive an advice that will put you on the right track"
+      "\nAfter each guess you'll receive an advice that will put you on the right track."
       "\n\nIf you'd like to quit the game, enter 'q'."
       "\n\nGood luck!", 'magenta',attrs=['bold']))
 
