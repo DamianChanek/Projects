@@ -59,7 +59,7 @@ def performMath():
             print('Invalid input. Please try again.')
             continue
         except ZeroDivisionError:
-            print('Your highschool math teacher just felt a sharp pain in his heart...')
+            print('Your highschool math teacher just felt a sharp pain in their heart...')
             continue
 
         else:
