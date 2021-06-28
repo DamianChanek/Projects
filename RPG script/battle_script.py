@@ -24,9 +24,9 @@ magic = [{'name': 'Fireball',
           'dmg': '100'}]
 
 # create items #
-sh_potion = Item('Small Health Potion', 250, 2)
-bh_potion = Item('Big Health Potion', 350, 1)
-full_heal = Item('Essence of Vitality', 500, 1)
+sh_potion = Item('Small Health Potion', 170, 2)
+bh_potion = Item('Big Health Potion', 220, 1)
+full_heal = Item('Essence of Vitality', 350, 1)
 mana_potion = Item('Mana Potion', 40, 3)
 grenade = Item('Fire Oak Flask', 300, 1)
 heal_burn = Item('Soothing Balm', 100, 3)
@@ -35,8 +35,8 @@ heal_dazed = Item('Potion of Clear Mind', 50, 3)
 player_items = [sh_potion, bh_potion, full_heal, grenade, mana_potion, heal_burn, heal_dazed]
 
 # create battle participants #
-player = Character(500, 65, 60, 55, magic, player_items)
-enemy = Character(3000, 130, 60, 55, magic, None)
+player = Character(350, 65, 60, 55, magic, player_items)
+enemy = Character(2000, 130, 60, 55, magic, None)
 
 # game-on flag #
 run = True
