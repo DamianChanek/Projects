@@ -140,11 +140,11 @@ while run:
     # check if player died #
     if player.get_hp() <= 0:
         player.character_death()
-        run = False
+        break
     # check if enemy died #
     if enemy.get_hp() <= 0:
         enemy.enemy_death()
-        run = False
+        break
 
     # HP, MP info #
     print(bcolors.OKGREEN + '\nPlayer:' + bcolors.ENDC + bcolors.WARNING + '\t\t\tEnemy:' + bcolors.ENDC)
@@ -164,7 +164,6 @@ while run:
     if choice == 'quit':
         print(bcolors.OKGREEN, '\nThanks for playing!', bcolors.ENDC)
         break
-        # run = False prints warning message for some reason... #
     # explanation of actions and spells #
     elif choice == 'help':
         player.command_help()
@@ -192,7 +191,7 @@ while run:
             # check if player won, else return enemy's current HP #
             if enemy.get_hp() <= 0:
                 enemy.enemy_death()
-                run = False
+                break
             else:
                 print(bcolors.OKGREEN + 'It has ' + str(enemy.get_hp()) + ' health points left.' + bcolors.ENDC)
             enemy_defended = False
@@ -204,7 +203,7 @@ while run:
             # check if player won #
             if enemy.get_hp() <= 0:
                 enemy.enemy_death()
-                run = False
+                break
             else:
                 print(bcolors.OKGREEN, '\nIt has', enemy.get_hp(), 'health points left.', bcolors.ENDC)
     # magic action #
@@ -215,7 +214,7 @@ while run:
         # quitting the game #
         if m_choice == 'quit':
             print(bcolors.OKGREEN + bcolors.BOLD + '\nThanks for playing!' + bcolors.ENDC)
-            run = False
+            break
         # explanation of actions and spells #
         if m_choice == 'help':
             player.command_help()
@@ -274,7 +273,7 @@ while run:
             # check if player won, else confirm the enemy's current HP #
             if enemy.get_hp() <= 0:
                 enemy.enemy_death()
-                run = False
+                break
             else:
                 print(bcolors.OKGREEN + 'It has ' + str(enemy.get_hp()) + ' health points left.' + bcolors.ENDC)
                 # check if spell applied burn, dazed or freeze status effects #
@@ -309,7 +308,7 @@ while run:
         # check if player quit the game #
         if item_choice == 'quit':
             print(bcolors.OKGREEN + bcolors.BOLD + '\nThanks for playing!' + bcolors.ENDC)
-            run = False
+            break
         # explanation of actions and spells #
         if item_choice == 'help':
             player.command_help()
@@ -355,7 +354,7 @@ while run:
                 # check if grenade killed the enemy #
                 if enemy.get_hp() <= 0:
                     enemy.enemy_death()
-                    run = False
+                    break
                 if enemy_burn:
                     print(bcolors.OKGREEN + 'The enemy is burning!' +
                           ' It will take fire damage at the begging of the next two rounds.' + bcolors.ENDC)
@@ -452,7 +451,7 @@ while run:
         # check if player died #
         if player.get_hp() <= 0:
             player.character_death()
-            run = False
+            break
         # check if spell applied burn, dazed or freeze status effects #
         if enemy_spell_index == 0:
             player_burn = player.status_check()
@@ -488,7 +487,7 @@ while run:
                 # check if player died #
                 if player.get_hp() <= 0:
                     player.character_death()
-                    run = False
+                    break
                 else:
                     print(bcolors.WARNING + 'Your guard was successful!' + bcolors.ENDC)
                 # un-flag player's guard #
@@ -502,7 +501,7 @@ while run:
                 # check if player died #
                 if player.get_hp() <= 0:
                     player.character_death()
-                    run = False
+                    break
                 else:
                     print(bcolors.WARNING, '\nYou are left with', player.get_hp(), 'points of health.', bcolors.ENDC)
         # defence action #
