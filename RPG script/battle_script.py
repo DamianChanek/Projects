@@ -150,10 +150,11 @@ while run:
     print(bcolors.OKGREEN + '\nPlayer:' + bcolors.ENDC + bcolors.WARNING + '\t\t\tEnemy:' + bcolors.ENDC)
     print(bcolors.OKGREEN + 'HP:' + str(player.get_hp()) + '/' + str(player.get_max_hp()) + bcolors.ENDC +
           bcolors.WARNING + '\t\tHP:' + str(enemy.get_hp()) + '/' + str(enemy.get_max_hp()) + bcolors.WARNING)
-    print(bcolors.OKGREEN + '\nMP:' + str(player.get_mp()) + '/' + str(player.get_max_mp()) + bcolors.ENDC +
+    print(bcolors.OKGREEN + 'MP:' + str(player.get_mp()) + '/' + str(player.get_max_mp()) + bcolors.ENDC +
           bcolors.WARNING + '\t\tMP:' + str(enemy.get_mp()) + '/' + str(enemy.get_max_mp()) + bcolors.ENDC
+          # align to the right if player mp becomes single digit #
           if player.get_mp() > 9
-          else bcolors.OKGREEN + '\nMP:' + str(player.get_mp()) + '/' + str(player.get_max_mp()) + bcolors.ENDC +
+          else bcolors.OKGREEN + 'MP:' + str(player.get_mp()) + '/' + str(player.get_max_mp()) + bcolors.ENDC +
           bcolors.WARNING + '\t\t\tMP:' + str(enemy.get_mp()) + '/' + str(enemy.get_max_mp()) + bcolors.ENDC)
     # player actions #
     player.choose_action()
