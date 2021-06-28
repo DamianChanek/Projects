@@ -134,8 +134,8 @@ class Character:
               '\n3. Defend - put your guard up to mitigate physical damage. Active until attacked. Spells ignore '
               'guard.',
               '\n4. Items - use one of your available items to either heal, deal damage, or restore mana:',
-              '\n\ta) Small Health Potion - heals you for 250 HP.',
-              '\n\tb) Big Health Potion - heals you for 350 HP.',
+              '\n\ta) Small Health Potion - heals you for 170 HP.',
+              '\n\tb) Big Health Potion - heals you for 220 HP.',
               '\n\tc) Essence of Vitality - fully heals you and cures all status effects.',
               '\n\td) Fire Oak Flask - deals 300 damage and has a chance to inflict burn.',
               '\n\te) Mana Potion - restores 30 points of mana.',
