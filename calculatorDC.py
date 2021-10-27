@@ -7,36 +7,37 @@ print('Type "c" to reset equation.')
 previous = 0
 run = True
 
+
 def performMath():
 
-    #take global variables into the function#
+    # take global variables into the function
 
     global run
     global previous
 
-    #create a variable for equation results#
+    # create a variable for equation results
 
     while True:
 
-        #embedding the function into try block to catch inputs without any numbers without breaking the program#
+        # embedding the function into a try block to catch invalid inputs
 
         try:
             equation = ''
 
-            # check for previous equation results and return them if applicable#
+            # check for previous equation results and return them if applicable
 
             if previous == 0:
                 equation = input('Enter equation:')
+
             else:
                 equation = input(str(previous))
-
-            # check for quit criteria#
+            # check for quit criteria
 
             if equation == 'q':
                 print('Thanks for using my calculator!')
                 run = False
 
-            # check for reset equation criteria#
+            # check for reset equation criteria
 
             elif equation == 'c':
                 print('Equation has been reset.')
@@ -45,7 +46,7 @@ def performMath():
             # remove any symbols that aren't numbers or operators #
 
             else:
-                equation = re.sub('[a-zA-z,:()" "]', '', equation)
+                equation = re.sub('[a-zA-z,:()" ]', '', equation)
 
             # do the math, accounting for previous results #
 
@@ -53,7 +54,6 @@ def performMath():
                     previous = eval(equation)
                 else:
                     previous = eval(str(previous) + equation)
-
 
         except SyntaxError:
             print('Invalid input. Please try again.')
@@ -65,7 +65,8 @@ def performMath():
         else:
             break
 
-#call the calculator function#
+# call the calculator function
+
 
 while run:
     performMath()
